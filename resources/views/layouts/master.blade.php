@@ -10,7 +10,7 @@
 		@include('layouts.head')
 	</head>
 
-	<body class="main-body app sidebar-mini "
+	<body class="main-body app sidebar-mini  "
 
     >
 		<!-- Loader -->

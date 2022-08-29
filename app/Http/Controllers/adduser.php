@@ -30,13 +30,11 @@ class adduser extends Controller
 
 
     public function store(Request $request)
-    {dd($request);
-        $user = new User();
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = $request->password;
-      //  dd($request);
-        $user->save();
+    {
+
+        User::create(['name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>bcrypt( $request->password)]);
 
         //  html::create($request->html());
         return redirect()->route('product.index');

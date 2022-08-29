@@ -3,7 +3,9 @@ Product
 @stop
 @extends('layouts.master')
 @section('css')
-    <!-- Internal Nice-select css  -->
+    <!-- CSS only -->
+    <!-- JavaScript Bundle with Popper -->
+   <!-- Internal Nice-select css  -->
     <link href="{{URL::asset('assets/plugins/jquery-nice-select/css/nice-select.css')}}" rel="stylesheet"/>
 @endsection
 @section('page-header')
@@ -11,18 +13,20 @@ Product
 
                 <nav>
 
-                        <h4 class="content-title  mb-5  mt-4 text-center text-primary bold  pink">Product</h4>
+                    <h4 class="content-title  mb-5  mt-4 text-center text-primary bold  pink">Product</h4>
+                    {{ $products->links()}}
                 </nav>
+
 
 				<!-- breadcrumb -->
 @endsection
 @section('content')
 				<!-- row -->
-                    <div class="row  ">
+                    <div class="row  mt-2 ">
 
                             @foreach( $products as $product)
-                            <div class="card mt-2  m-auto col-md- btn ">
-                                <div class="card-body">
+                            <div class="card mt-2 mb-7  m-auto col-md- btn ">
+                                <div class="card-body mb-3">
                                     <div class="pro-img-box  ">
                                         <div class="d-flex product-sale">
                                             <div class="badge bg-pink">New</div>
@@ -80,13 +84,17 @@ Product
 
 
                             </div>
+
                             @endforeach
+
                         <br>
+
                     </div>
 
 @endsection
 @section('js')
     <!-- Internal Nice-select js-->
     <script src="{{URL::asset('assets/plugins/jquery-nice-select/js/jquery.nice-select.js')}}"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="{{URL::asset('assets/plugins/jquery-nice-select/js/nice-select.js')}}"></script>
 @endsection

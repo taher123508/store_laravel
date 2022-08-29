@@ -69,7 +69,7 @@ Route::resource('category', CategoryController::class,)->only('store','index');
 //rgisteruser
 Route::get('adduser',function (){
     return view('adduser');});
-Route::post('adduser',[adduser::class,'store'])->name('addteusers.store');
+Route::post('adduser',[adduser::class,'store'])->name('addusers.store');
 Route::resource('User', adduser::class,)->only('store');
 
 Route::get('/{page}', [AdminController::class,'index']);

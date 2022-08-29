@@ -11,7 +11,6 @@
 	</head>
 
 	<body class="main-body bg-primary-transparent"
-
     >
 		<!-- Loader -->
 		<div id="global-loader">
